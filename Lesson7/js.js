@@ -3,7 +3,7 @@ document.getElementById('radius').oninput = cssGenerator;
 function cssGenerator() {
     var div = document.getElementById('test');
     
-    //textarea
+    //text
     var out = document.getElementById('out');
 //    console.log(this.value);
     div.style.borderRadius = this.value + 'px';
