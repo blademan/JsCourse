@@ -35,6 +35,6 @@ var m = {
         }
         return sum;
     }
-}
+};
 
 console.log(m.sum());
