@@ -1,29 +1,42 @@
 window.onload = function(){
 
-var back = document.querySelector('.back');
-var next = document.querySelector('.next');
 var foto = document.querySelectorAll('.photos img');
+    
+var newSlider = new Slider(foto);
+    
+    
+    var back =  document.querySelector('.back');
+    
+back.onclick = function() {
+        newSlider.prev();
+    }
+        document.querySelector('.next').onclick = function() {
+        newSlider.next();
+    }
 
-var i = 0;
-    
-    next.onclick = function() {
-        foto[i].className= '';
-        i++;
-         if ( i >= foto.length) {
-            i = 0;
-        }
-        foto[i].className= 'show';
-       
-    }
-    
+
+
+ function Slider(foto) {
+     this.foto = foto;
+     var i = 0;
      
-    back.onclick = function() {
-        foto[i].className= '';
-        i--;
-         if ( i < 0) {
-            i = foto.length -1;
-        }
-        foto[i].className= 'show';
-       
-    }
+     this.prev = function () {
+         this.foto[i].classList.remove('show');
+         i--;
+         if(i < 0) {
+             i = this.foto.length - 1;
+         }
+         this.foto[i].classList.add('show');
+     }
+     
+     this.next = function () {
+         this.foto[i].classList.remove('show');
+         i++;
+         if(i >= this.foto.length) {
+             i = 0;
+         }
+         this.foto[i].classList.add('show');
+     }
+     
+ }   
 }
