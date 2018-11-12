@@ -8,7 +8,7 @@ body{
 }
 
 
-#gallery {
+.gallery {
     padding-top: 100px;
 	width: 1025px;
     margin: 0 auto;

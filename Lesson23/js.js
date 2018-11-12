@@ -1,23 +1,31 @@
 window.onload = function(){
 
-var foto = document.querySelectorAll('.photos img');
+var foto = document.querySelectorAll('.gal1 img');  
     
+var foto2 = document.querySelectorAll('.gal2 img');
+
 var newSlider = new Slider(foto);
     
-    
-    var back =  document.querySelector('.back');
-    
-back.onclick = function() {
+document.querySelector('.gal1 .buttons .back').onclick = function() {
         newSlider.prev();
     }
-        document.querySelector('.next').onclick = function() {
+        document.querySelector('.gal1 .buttons .next').onclick = function() {
         newSlider.next();
+    }
+        
+        var newSlider2 = new Slider(foto2);
+    
+document.querySelector('.gal2 .back').onclick = function() {
+        newSlider2.prev();
+    }
+        document.querySelector('.gal2 .next').onclick = function() {
+        newSlider2.next();
     }
 
 
 
  function Slider(foto) {
-     this.foto = foto;
+     var xthis.foto = foto;
      var i = 0;
      
      this.prev = function () {
