@@ -1,16 +1,24 @@
 window.onload = function(e) {
     
-    function Cat(name) { 
-        this.name = name;
-        this.age = 0;
-        
-        this.run = function() {
-            console.log(run);
-        }
-    }
+    var input = document.querySelectorAll('form input');
     
-    
-    
-    var cat1 = new Cat('Brenda');
-    console.log(cat1);
+   document.querySelector('form').onsubmit = function(e) {
+       var error = false;
+       
+       for (var i = 0; i<input.length; i++) {
+          if(input[i].value === ''){
+                 input[i].classList.add('errorInput');
+              error = true;
+             
+           
+          } else { 
+              input[i].classList.remove('errorInput');
+                   }
+           if(error) {
+                e.preventDefault();
+           }
+           
+       }
+   }
+  
 }
