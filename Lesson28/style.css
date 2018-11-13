@@ -9,3 +9,8 @@ input {
 .errorInput {
 	border: 1px solid red;
 }
+
+.focus {
+    -webkit-box-shadow: 0 0 5px red;
+    box-shadow: 0 0 5px red;
+}
