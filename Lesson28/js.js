@@ -48,7 +48,10 @@ window.onload = function(e) {
        }
            
        
-           
-       }
+    var jqInputs new OurJquery(input);
+    jqInputs.click(function() {
+        this.classList.remove('errorInput');
+    });
+}
    
   
