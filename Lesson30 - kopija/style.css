@@ -1,0 +1,12 @@
+.error{
+    background-color: crimson;
+    border-color: aqua;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.5)red;
+    box-shadow: rgba(0, 0, 0, 0.5)red;
+}
+
+.focus{
+    border-color: aqua;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.5)red;
+    box-shadow: rgba(0, 0, 0, 0.5)red;
+}
