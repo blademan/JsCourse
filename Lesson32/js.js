@@ -12,7 +12,7 @@ $(function() {
     
     $('.list .jautajums').on('click', function() {
        var atbilde = $(this).next();
-        $('.list .atbilde').not(atbilde).slideUp(300); 
+        $('.list .atbilde:visible').not(atbilde).slideUp(300); 
         atbilde.slideToggle(500);
        
     });
