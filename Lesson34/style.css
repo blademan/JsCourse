@@ -1,0 +1,25 @@
+.gallery {
+	width: 500px;
+    margin: 0 auto;
+
+    
+}
+.photo {
+    width: 500px;
+    height: 375px;
+    overflow: hidden;
+   border: 5px solid black;
+    
+}
+img{
+    width: 100%;
+    height: auto;
+  display: none;
+}
+
+.show{
+    display: block;
+}
+.hide{
+    display: none;
+}
