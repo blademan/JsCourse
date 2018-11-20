@@ -1,0 +1,14 @@
+.red-border {
+	border: 2px solid red;
+    width: 400px;
+    height: 400px;
+}
+.bluebox {
+	width: 100px;
+    height: 100px;
+    background-color: blue;
+}
+.animate {
+	background-color: chartreuse;
+    padding: 20;
+}
