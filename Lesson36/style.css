@@ -2,8 +2,10 @@
 	border: 2px solid red;
     width: 400px;
     height: 400px;
+    position: relative;
 }
 .bluebox {
+    position: absolute;
 	width: 100px;
     height: 100px;
     background-color: blue;
