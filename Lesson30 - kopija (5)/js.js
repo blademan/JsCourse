@@ -6,5 +6,5 @@ function displayTime() {
     
     div.innerHTML = now.toLocaleTimeString();
     
-    setTimeout(displayTime, 1000);
+    setTimeout(displayTime, 1000); //rekursija
 }
