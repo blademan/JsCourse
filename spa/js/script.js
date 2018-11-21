@@ -33,5 +33,48 @@ info.addEventListener('click', function(event) {
         }
     }
 })
+    
+// Timer
+    
+let deadLine ='2018-11-23';
+    
+function getTimeRem(endtime) {
+    let t = Date.parse(endtime) - Date.parse(new Date());
+    let seconds = Math.floor( (t/1000) %60);
+    let minutes = Math.floor( (t/1000/60) %60);
+    let hours = Math.floor( (t/(1000*60*60)) );
+    
+    return {
+        'total': t,
+        'hours': hours,
+        'minutes': minutes,
+        'seconds': seconds
+    };
+                             
+                             
+};
+  
+function setClock(id, endtime) {
+    let timer = document.querySelector('#timer');
+    let hours = document.querySelector('.hours');
+    let minutes = document.querySelector('.minutes');
+    let seconds = document.querySelector('.seconds');
+    
+    function updateClock() {
+        let t = getTimeRem(endtime);
+        hours.innerHTML = t.hours;
+        minutes.innerHTML = t.minutes;
+        seconds.innerHTML = t.seconds;
+        if(t.total<=0){
+            clearInterval(timeInterval);
+        }
+    };
+    
+updateClock();
+    let timeInterval = setInterval(updateClock, 1000);
+};
+  
+    setClock('timer', deadLine);
+    
 });
 
